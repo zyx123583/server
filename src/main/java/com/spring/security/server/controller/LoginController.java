@@ -1,16 +1,19 @@
 package com.spring.security.server.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-import java.security.Principal;
-
-@RestController
+@Controller
 public class LoginController {
+    /**
+     * 自定义登录页面
+     *
+     * @return
+     */
+    @GetMapping("/login")
+    public String login() {
 
-    @RequestMapping("userDetails")
-    public Principal getUserDetails(Principal principal){
-        return principal;
+        return "login";
     }
 
 

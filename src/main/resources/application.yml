@@ -1,0 +1,9 @@
+server:
+  port: 8300
+  servlet:
+    context-path: /auth
+spring:
+  thymeleaf:
+    cache: false
+    servlet:
+      content-type: text/html
